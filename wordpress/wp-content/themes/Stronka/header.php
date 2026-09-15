@@ -10,5 +10,5 @@
 <body <?php body_class(); ?>>
 
 <header class="header">
-    <h1>Pizzeria Pauza</h1>
+    <h1>Marka odziezowa</h1>
 </header>

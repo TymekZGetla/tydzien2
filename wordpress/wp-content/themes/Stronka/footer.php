@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>© 2026 Pizzeria Pauza</p>
+    <p>© 2026 Marka Odziezowa</p>
 </footer>
 
 <?php wp_footer(); ?>
