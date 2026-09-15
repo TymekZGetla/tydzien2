@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>© 2026 Marka Odziezowa</p>
+    <p>© <?php echo date('Y'); ?> Marka Odziezowa</p>
 </footer>
 
 <?php wp_footer(); ?>
