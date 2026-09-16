@@ -13,12 +13,19 @@ $products = [
         "rozmiary" => ["S", "M", "L"]
 
     ],
-      [
+    [
         "nazwa" => "Bluza",
         "cena" => 299,
           "zdjecie" => "pozniejbedziezdjecie.png",
         "rozmiary" => ["S", "M", "L", "XL"]
 
-    ]
+    ],
+    [
+        "nazwa" => "Pasek",
+        "cena" => 199,
+        "zdjecie" => "pozniejbedziezdjecie.png",
+        "rozmiary" => ["One size"]
+
+    ],
 ];
 ?>

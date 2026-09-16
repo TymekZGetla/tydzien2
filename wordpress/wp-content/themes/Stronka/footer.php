@@ -1,8 +1,8 @@
-<footer class="footer">
-    <p>© <?php echo date('Y'); ?> Marka Odziezowa</p>
-</footer>
+    <footer class="footer">
+        <p>© <?php echo date('Y'); ?> Marka Odziezowa</p>
+    </footer>
 
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 
-</body>
-</html>
+    </body>
+    </html>
