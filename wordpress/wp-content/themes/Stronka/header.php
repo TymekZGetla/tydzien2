@@ -28,6 +28,15 @@
             <?php echo esc_html($telefon); ?>
         </a>
     <?php endif; ?>
+     <?php
+    $email = get_field('email', 'option');
+
+    if ($email) :
+    ?>
+        <a href="email:<?php echo esc_attr($email); ?>">
+            <?php echo esc_html($email); ?>
+        </a>
+    <?php endif; ?>
 
     <div class="menu">
 
