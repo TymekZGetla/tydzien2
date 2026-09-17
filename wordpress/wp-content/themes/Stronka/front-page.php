@@ -3,6 +3,8 @@
 <main>
     <h1>Witaj w Mojej marce odzieżowej</h1>
 
+<?php echo get_the_post_thumbnail(get_option('page_on_front')); ?>
+
     <?php include 'dane.php'; ?>
     <div class="products">
         <?php foreach ($products as $product) 

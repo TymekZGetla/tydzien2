@@ -11,7 +11,13 @@
 
 <header class="header">
 
-    <h1>Marka odzieżowa</h1>
+    <?php
+$logo = get_field('logo', 'option');
+
+if ($logo) :
+?>
+    <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+<?php endif; ?>
 
     <div class="menu">
 

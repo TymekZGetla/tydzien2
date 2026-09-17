@@ -1,15 +1,16 @@
 <?php
-
 function pizzeria_pauza_styles() {
     wp_enqueue_style(
         'pizzeria-pauza-style',
-        get_template_directory_uri() . '/style.css',
+        get_stylesheet_uri(),
         array(),
-        '1.0'
+        filemtime(get_stylesheet_directory() . '/style.css')
     );
 }
 
 add_action('wp_enqueue_scripts', 'pizzeria_pauza_styles');
+add_action('wp_enqueue_scripts', 'pizzeria_pauza_styles');
+
 if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 
     function mytheme_register_nav_menu() {
@@ -32,3 +33,10 @@ if( function_exists('acf_add_options_page') )
         'redirect' => false
     ));
     }
+    function pizzeria_pauza_setup() {
+
+    add_theme_support('post-thumbnails');
+
+}
+
+add_action('after_setup_theme', 'pizzeria_pauza_setup');
