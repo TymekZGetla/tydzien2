@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>© <?php echo date('Y'); ?> Marka Odziezowa</p>
+    <p>© <?php echo date('Y'); ?> Balenciaga</p>
 </footer>
 
 <?php wp_footer(); ?>

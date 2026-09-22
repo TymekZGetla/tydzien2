@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,45 +17,44 @@
 
     if ($logo) :
     ?>
-        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
-    <?php endif; ?>
 
-    <?php
-    $telefon = get_field('telefon', 'option');
-
-    if ($telefon) :
-    ?>
-        <a href="tel:<?php echo esc_attr($telefon); ?>">
-            <?php echo esc_html($telefon); ?>
+        <a href="<?php echo esc_url(home_url()); ?>">
+            <img src="<?php echo esc_url($logo['url']); ?>"
+                 alt="<?php echo esc_attr($logo['alt']); ?>">
         </a>
-    <?php endif; ?>
-     <?php
-    $email = get_field('email', 'option');
 
-    if ($email) :
-    ?>
-        <a href="email:<?php echo esc_attr($email); ?>">
-            <?php echo esc_html($email); ?>
+    <?php endif; ?>
+
+
+    <div class="header-icons">
+        <a href="<?php echo esc_url(home_url()); ?>/koszyk"> 
+        <span class="material-symbols-outlined cart">
+            shopping_cart
+        </span>
         </a>
-    <?php endif; ?>
 
-    <div class="menu">
+        <div class="menu">
 
-        <button class="menu-button">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
+            <button class="menu-button" onclick="toggleMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
 
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'primary_menu',
-                'menu_class' => 'header-menu',
-                'container' => 'nav',
-                'container_class' => 'menu-container',
-            )
-        );
-        ?>
+            <div class="menu-dropdown" id="menuDropdown">
+
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary_menu',
+                        'menu_class' => 'header-menu',
+                        'container' => false,
+                    )
+                );
+                ?>
+
+            </div>
+
+        </div>
 
     </div>
 
-</header>
+    </header>

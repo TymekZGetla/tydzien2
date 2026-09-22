@@ -3,7 +3,7 @@
 <main>
     <h1>Witaj w Mojej marce odzieżowej</h1>
 
-<?php echo get_the_post_thumbnail(get_option('page_on_front')); ?>
+
 
     <?php include 'dane.php'; ?>
     <div class="products">
@@ -12,7 +12,7 @@
             ?>
 
             <div class="product">
-                <h2><?php echo $product['nazwa']; ?></h2>
+                <h2 class="productname"><?php echo $product['nazwa']; ?></h2>
 
                 <p>Cena: <?php echo $product['cena']; ?> zł</p>
 
