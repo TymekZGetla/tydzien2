@@ -55,3 +55,21 @@ function marka_setup()
     add_image_size('custom-image', 800, 600, true);
 }
 add_action('after_setup_theme', 'marka_setup');
+
+function register_products()
+{
+    register_post_type('product',
+    [
+        'labels' => [
+        'name' => 'produkty',
+        'singular_name' => 'produkt'
+        ],
+        'public' => true,
+        'supports' => [
+            'title',
+            'editor',
+            'thumbnail'
+        ]
+    ]);
+}
+add_action('init', 'register_products');

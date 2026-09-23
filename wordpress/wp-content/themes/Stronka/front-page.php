@@ -3,29 +3,40 @@
 <main>
     <h1>Witaj w Mojej marce odzieżowej</h1>
 
-
-
-    <?php include 'dane.php'; ?>
     <div class="products">
-        <?php foreach ($products as $product) 
-        { 
-            ?>
 
-            <div class="product">
-                <h2 class="productname"><?php echo $product['nazwa']; ?></h2>
+        <?php
+        $query = new WP_Query([
+            'post_type' => 'product'
+        ]);
 
-                <p>Cena: <?php echo $product['cena']; ?> zł</p>
+        if ($query->have_posts()) :
 
-                <div class="sizesbuttons">
-                    <?php foreach ($product['rozmiary'] as $rozmiar) 
-                    { ?>
-                        <button><?php echo $rozmiar; ?></button>
-                    <?php } ?>
+            while ($query->have_posts()) : $query->the_post();
+        ?>
+
+                <div class="product">
+
+                    <a class="product-name" href="<?php the_permalink(); ?>">
+
+                        <?php the_post_thumbnail(); ?>
+
+                        <h2><?php the_title();?></h2>
+
+                    </a>
+
                 </div>
-            </div>
-        <?php 
-        } ?>
+
+        <?php
+            endwhile;
+
+            wp_reset_postdata();
+
+        endif;
+        ?>
+
     </div>
+
 </main>
 
 <?php get_footer(); ?>
