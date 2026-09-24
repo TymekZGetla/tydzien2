@@ -22,6 +22,8 @@ body
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    top: 0;
+    position: sticky;
 }
 
 .footer 
@@ -179,7 +181,6 @@ body.dark .footer
     background-color: #222;
 }
 
-
 body.dark .header-icons a
 {
     color: white;
@@ -198,4 +199,20 @@ body.dark .product-name
 body.dark .darkmode
 {
     color: white;
+}
+.swiper {
+    width: 100%;
+    height: 800px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

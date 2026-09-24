@@ -112,8 +112,8 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  * visit the documentation.
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
- */
-define( 'WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', '') );
+ */// Enable WP_DEBUG mode
+
 
 /* Add any custom values between this line and the "stop editing" line. */
 

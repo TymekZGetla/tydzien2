@@ -65,6 +65,7 @@ function register_products()
         'singular_name' => 'produkt'
         ],
         'public' => true,
+        'rewrite' => ['slug' => 'product'],
         'supports' => [
             'title',
             'editor',

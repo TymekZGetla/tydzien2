@@ -1,7 +1,22 @@
 <?php get_header(); ?>
 
 <main>
-    <h1>Witaj w Mojej marce odzieżowej</h1>
+
+<?php if (have_rows('slajdy', 'option')) : ?>
+  <?php while (have_rows('slajdy', 'option')) : the_row(); ?>
+  <?php $zdjecie = get_sub_field('zdjecie'); ?>
+ <?php if ($zdjecie) : ?>
+ <img src="<?php echo $zdjecie['url']; ?>">
+ <?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
+
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+</div>
 
     <div class="products">
 
@@ -20,7 +35,7 @@
                     <a class="product-name" href="<?php the_permalink(); ?>">
 
                         <?php the_post_thumbnail(); ?>
-
+                                                                                                                                                                                    
                         <h2><?php the_title();?></h2>
 
                     </a>
@@ -35,7 +50,6 @@
         endif;
         ?>
 
-    </div>
 
 </main>
 

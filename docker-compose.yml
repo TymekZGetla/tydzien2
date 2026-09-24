@@ -1,4 +1,4 @@
-services:
+aservices:
   php:
     image: php:8.3-apache
     ports:
@@ -28,7 +28,7 @@ services:
       MYSQL_PASSWORD: wordpress
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql   s
 
 volumes:
   db_data:
